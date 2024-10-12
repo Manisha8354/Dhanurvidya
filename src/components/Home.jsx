@@ -80,12 +80,16 @@ import { motion, useMotionValue } from "framer-motion";
 
 // Importing images from the assets folder
 import image1 from '../assets/banner2.jpeg';
-import image2 from '../assets/banner6.jpeg';
-import image3 from '../assets/banner7.jpeg';
+import image2 from '../assets/homepooja.jpeg';
+import image3 from '../assets/bannerimage.jpeg';
 import image4 from '../assets/banner1.jpeg';
-import image5 from '../assets/banner5.jpeg';
+import image5 from '../assets/bannerimage1.jpeg';
 import image6 from '../assets/banner3.jpeg';
-import image7 from '../assets/banner0.jpeg';
+import image7 from '../assets/homepooja1.jpeg';
+import Home1 from "./Home1";
+import About from "./About";
+// import Testimonials from "./Testimonial";
+// import Testimonial from "./Testimonial";
 
 const imgs = [image1, image2, image3, image4, image5, image6, image7];
 
@@ -204,8 +208,11 @@ const Dots = ({ imgIndex, setImgIndex }) => {
 const GradientEdges = () => {
   return (
     <>
-      <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0" />
+      <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0"  />
       <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" />
+      <Home1/>
+      <About/>
+      {/* <Testimonial/> */}
     </>
   );
 };

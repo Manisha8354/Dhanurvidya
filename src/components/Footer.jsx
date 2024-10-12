@@ -1,25 +1,30 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram ,faYoutube, faWhatsapp} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
+
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-red-950 via-orange-800 to-yellow-800 text-gray-300 py-10 ">
+    <footer className="bg-gradient-to-r from-yellow-800 via-orange-800 to-red-950 text-gray-300 py-10 ">
       <div className="container mx-auto px-5 lg:px-0 flex flex-wrap justify-between space-y-8 lg:space-y-0">
         {/* First Section */}
         <div className="w-full lg:w-1/4">
-          <h3 className="text-xl font-semibold text-white mb-3">Srividya Learning Centre</h3>
-          <p className="text-sm">
-            Srividya Learning Centre is a non-profit organisation established
-            to spread the teachings of Universal Mother Sri Lalitha
-            Tripurasundari.
-          </p>
-        </div>
+  <h3 className="text-xl font-semibold text-white mb-3">Isodhan International Society</h3>
+  <img 
+    src="http://localhost:5173/src/assets/logo1.jpeg" 
+    alt="Isodhan International Society Logo" 
+    className="w-32 h-auto" 
+  />
+</div>
+
 
         {/* About Section */}
         <div className="w-full lg:w-1/4">
-          <h3 className="text-xl font-semibold text-white mb-3">About</h3>
+          <h3 className="text-xl font-semibold text-white mb-3">Information</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-orange-500">About Srividya</a></li>
-            <li><a href="#" className="hover:text-orange-500">Srividya Learning Centre</a></li>
+            <li><a href="#" className="hover:text-orange-500">Home</a></li>
+            <li><a href="#" className="hover:text-orange-500">About Us</a></li>
             <li><a href="#" className="hover:text-orange-500">Sri Guru Karunamaya</a></li>
             <li><a href="#" className="hover:text-orange-500">Guru Lineage</a></li>
             <li><a href="#" className="hover:text-orange-500">Events</a></li>
@@ -43,18 +48,38 @@ const Footer = () => {
 
         {/* Contact Section */}
         <div className="w-full lg:w-1/4">
-          <h3 className="text-xl font-semibold text-white mb-3">Srividya Learning Centre</h3>
-          <address className="not-italic text-sm mb-2">
-            27,28 Chairman Rajamanikam Street,<br />
-            Near New Railway Station,<br />
-            Karthinagar, Kanchipuram, TN 631502, India.
-          </address>
-          <p className="text-sm">Phone: +91 8088256632</p>
-          <p className="text-sm">WhatsApp: +91 8608747873</p>
-          <p className="text-sm">
-            Email: <a href="mailto:srimeru999@gmail.com" className="hover:text-orange-500">srimeru999@gmail.com</a>
-          </p>
-        </div>
+  <h3 className="text-xl font-semibold text-white mb-3">Connect With Us</h3>
+
+  {/* Social Media Icons */}
+  <div className="flex space-x-4 mb-3">
+    <a href="https://www.facebook.com/Dhanurveda" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+      <FontAwesomeIcon icon={faFacebook} size="2x" />
+    </a>
+    <a href="https://www.instagram.com/isodhan_dhanurveda/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
+      <FontAwesomeIcon icon={faInstagram} size="2x" />
+    </a>
+    <a href="https://www.youtube.com/channel/UCBnrjXRrwJtXze9LmnS7y3Q" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
+      <FontAwesomeIcon icon={faYoutube} size="2x" />
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=+919154264942&text=Hello" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
+      <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+    </a>
+    <a href="mailto:internationaldhanurveda@gmail.com" className="hover:text-orange-500">
+      <FontAwesomeIcon icon={faEnvelope} size="2x" />
+    </a>
+  </div>
+
+  {/* Address Row */}
+  <div className="flex items-center mb-2">
+    <FontAwesomeIcon icon={faMapMarkerAlt} className="text-lg mr-2 mb-14" />
+    <address className="not-italic text-sm">
+    Head office : ISODHAN DHANURVEDA GURUKULAM , Anna Rao Circle, beside more super market, Srinivasa Nagar, N G O Colony, Tirupati 517501
+    </address>
+  </div>
+
+
+
+</div>
       </div>
 
       {/* Footer Bottom Section */}

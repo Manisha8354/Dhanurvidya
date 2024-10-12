@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
@@ -46,9 +48,15 @@ const Navbar = () => {
           <span className="mx-2 text-maroon hover:text-white transition-colors duration-300 ease-in-out">
             |
           </span>
-          <span className="text-xs md:text-sm lg:text-base hover:text-maroon hover:scale-110 transition-transform transition-colors duration-300 ease-in-out">
-            Signup
-          </span>
+          <div className="relative inline-block">
+  <span className="text-xs md:text-sm lg:text-base hover:scale-110 transition-transform transition-colors duration-300 ease-in-out">
+    <FontAwesomeIcon icon={faUser} className="text-base md:text-lg lg:text-xl hover:text-maroon" />
+  </span>
+  <span className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-1 text-xs text-transparent opacity-0 hover:opacity-100 hover:text-black transition-opacity duration-300">
+    Signup / Signin
+  </span>
+</div>
+
           <span className="mx-2 text-maroon hover:text-white transition-colors duration-300 ease-in-out">
             |
           </span>
